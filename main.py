@@ -133,7 +133,11 @@ chosen_precision = float(input())
 print('Выбрана точность {0}'.format(chosen_precision))
 
 print('Вычисляю...')
-result, result_n, result_delta = iterate(chosen_function, chosen_evaluator, chosen_left, chosen_right, chosen_precision)
+result, result_n, result_delta = iterate(chosen_function,
+                                         chosen_evaluator,
+                                         chosen_left,
+                                         chosen_right,
+                                         chosen_precision)
 print('Готово')
 print('Значение интеграла: {0}'.format(result))
 print('Количество итераций: {0}'.format(result_n))
