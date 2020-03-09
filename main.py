@@ -39,7 +39,7 @@ def eval_simpson(f, xs):
     x3 = xevens[1:]
     y3 = yevens[1:]
 
-    fragments = (
+    return np.sum(
             (2 * (y1 * (x2 - x3) -
                   y2 * (x1 - x3) +
                   y3 * (x1 - x2)) * (x3 ** 3 - x1 ** 3) -
@@ -50,7 +50,6 @@ def eval_simpson(f, xs):
                   y2 * x1 * x3 * (x1 - x3) +
                   y3 * x1 * x2 * (x1 - x2)) * (x3 - x1))
             / (6 * (x1 - x2) * (x1 - x3) * (x2 - x3)))
-    return np.sum(fragments)
 
 
 def iterate(f, e, l, r, p):
